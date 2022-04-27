@@ -18,7 +18,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'historical-bank'
-  s.version     = '0.1.5'
+  s.version     = '0.1.10'
   s.summary     = 'Historical Bank'
   s.description = 'A `Money::Bank::Base` with historical exchange rates'
   s.authors     = ['Kostis Dadamis', 'Emili Parreno']

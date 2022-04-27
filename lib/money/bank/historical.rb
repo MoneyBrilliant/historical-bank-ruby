@@ -323,7 +323,7 @@ class Money
       def get_base_rate(currency, date)
         @mutex.synchronize do
           rates = @rates[currency.iso_code]
-          rates[date] if rates
+          rates[date.to_s] if rates
         end
       end
 
