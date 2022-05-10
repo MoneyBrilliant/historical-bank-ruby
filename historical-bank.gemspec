@@ -18,7 +18,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'historical-bank'
-  s.version     = '0.1.10'
+  s.version     = '0.1.11'
   s.summary     = 'Historical Bank'
   s.description = 'A `Money::Bank::Base` with historical exchange rates'
   s.authors     = ['Kostis Dadamis', 'Emili Parreno']
@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/jeopard/historical-bank-ruby'
   s.license     = 'Apache-2.0'
 
-  require 'rake'
+  # require 'rake'
   s.files = FileList['lib/**/*.rb', 'Gemfile', 'examples/*.rb',
                      'historical-bank.gemspec', 'spec/**/*.rb'].to_a
   s.files += ['README.md', 'LICENSE', 'CONTRIBUTING.md', 'AUTHORS',
