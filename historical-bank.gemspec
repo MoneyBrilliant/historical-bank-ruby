@@ -24,12 +24,11 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/jeopard/historical-bank-ruby'
   s.license     = 'Apache-2.0'
 
-  require 'rake'
-  s.files = Dir['lib/**/*.rb', 'examples/*.rb', 'spec/**/*.rb']
-  s.files += ['Gemfile', 'historical-bank.gemspec', 'README.md', 'LICENSE',
-              'CONTRIBUTING.md', 'AUTHORS', 'CHANGELOG.md',
-              'spec/fixtures/time-series-2015-09.json']
-
+  s.files = Dir.chdir(File.expand_path(__dir__)) do
+    `git ls-files -z`.split("\x0").reject do |f|
+      (f == __FILE__) || f.match(%r{\A(?:(?:bin|test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
+    end
+  end
   s.test_files = s.files.grep(%r{^spec/})
 
   s.extra_rdoc_files = ['README.md']
