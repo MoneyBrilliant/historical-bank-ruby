@@ -1,6 +1,4 @@
 #
-# Copyright 2017 Skyscanner Limited.
-#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -18,7 +16,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'historical-bank'
-  s.version     = '0.1.12'
+  s.version     = '0.2.0'
   s.summary     = 'Historical Bank'
   s.description = 'A `Money::Bank::Base` with historical exchange rates'
   s.authors     = ['Kostis Dadamis', 'Emili Parreno']
@@ -39,17 +37,18 @@ Gem::Specification.new do |s|
 
   s.require_path = 'lib'
 
-  s.required_ruby_version = '>= 2.0.0'
+  s.required_ruby_version = '>= 3.1.0'
 
   s.add_runtime_dependency 'money',    '~> 6.7'
   s.add_runtime_dependency 'httparty', '~> 0.14'
-  s.add_runtime_dependency 'redis',    ['>=3.3', '~> 4.0']
+  s.add_runtime_dependency 'redis',    ['>=4.0', '~> 5.0']
+
 
   s.add_development_dependency 'rspec',      '~> 3.5'
   s.add_development_dependency 'pry-byebug', '~> 3.4'
   s.add_development_dependency 'rubocop',    '~> 0.52'
-  s.add_development_dependency 'rack-test',  '~> 0.6'
-  s.add_development_dependency 'webmock',    '~> 2.3'
-  s.add_development_dependency 'faker',      '~> 1.6'
+  s.add_development_dependency 'rack-test',  '~> 2.0'
+  s.add_development_dependency 'webmock',    '~> 3.0'
+  s.add_development_dependency 'faker',      '~> 3.0'
   s.add_development_dependency 'timecop',    '~> 0.8'
 end
